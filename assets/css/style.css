@@ -1,0 +1,65 @@
+body {
+	background: url("../images/space.jpg") no-repeat;
+	background-size: cover;
+
+
+}
+
+#content, #game-over, #message-box {
+	background-color: rgba(0,0,0,0.8);
+	min-height: 600px;
+	max-height: 80%;
+	margin: 0px auto;
+	display: block;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	color: white;
+	display: none;
+	z-index: 2;
+}
+
+#answers li {
+	list-style: none;
+	border: 2px solid rgba(0,0,0,0);
+}
+
+#answers li:hover {
+	border: 2px solid blue;
+}
+
+#question, #timer, #answers {
+	text-align: center;
+	padding: 2%;
+}
+
+#answers li {
+	padding: 1%;
+	width: 80%;
+	margin: 0px auto;
+}
+
+#instructions {
+	background-color: rgba(0,0,0,0.8);
+	min-height: 600px;
+	max-height: 80%;
+	margin: 0px auto;
+	display: block;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	color: white;
+	text-align: center;
+	z-index: 2;
+}
+
+
+#greeter, #instruction, #play, #message-box {
+	padding: 2%;
+}
+
+#greeter, #win-loss {
+	padding-top: 5%;
+}
+
+#message-box {
+	text-align: center;
+}
