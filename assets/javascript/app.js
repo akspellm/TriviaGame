@@ -230,6 +230,9 @@ question10 = {
 }
 ];
 
+var tickTock = new Audio();
+tickTock.src = "ticktock.wav";
+
 $("#play").on("click", function() {
 
     var display;
@@ -237,7 +240,6 @@ $("#play").on("click", function() {
     var count = 10;
     var timer;
     var timerOn;
-    var gameOn = true;
     var i = 0;
     var correct = 0;
     var incorrect = 0;
@@ -270,6 +272,8 @@ $("#play").on("click", function() {
             displayStats();
             messageOff();
         })
+
+        tickTock.play();
     };
 
     function startTimer() {
@@ -283,25 +287,26 @@ $("#play").on("click", function() {
     };
 
     function displayStats() {
-        $("#content").toggle();
-        $("#message-box").toggle();
-        $("#correct-answers").html("Correct Answers: " + correct);
-        $("#incorrect-answers").html("Inorrect Answers: " + incorrect);
-    }
-
-    function messageOff() {
-        off = setTimeout(function() {
-            i += 1;
-            count = 10;
+    	i += 1;
+    	tickTock.src="";
             if (i === questions.length) {
                 gameOver();
             } else {
-                $("#answers").empty();
-                displayQuestion();
+		        $("#content").toggle();
+		        $("#message-box").toggle();
+		        $("#correct-answers").html("Correct Answers: " + correct);
+		        $("#incorrect-answers").html("Inorrect Answers: " + incorrect);
+    }
+}
+
+    function messageOff() {
+    	count = 10;
+        $("#answers").empty();
+        displayQuestion();
+        off = setTimeout(function() {
                 startTimer();
                 $("#message-box").toggle();
             	$("#content").toggle();
-            }
         }, 3000);
     }
 
@@ -314,7 +319,7 @@ $("#play").on("click", function() {
         $("#game-over").toggle();
         $("#final-correct").html("Correct Answers: " + correct);
         $("#final-incorrect").html("Incorrect Answers: " + incorrect);
-        gameOn === false;
+        i = 0;
     }
 
 
@@ -327,7 +332,13 @@ $("#play").on("click", function() {
     countdown();
 
     startTimer();
+
+    
 });
+
+$("#play-again").on("click", function() {
+    location.reload();
+})
 		
 
 

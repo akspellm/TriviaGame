@@ -68,6 +68,7 @@ body {
 	background-color: rgb(255,170,0);
 	border: 2px solid rgb(0,85,121);
 	color: rgb(0,85,121);
+	font-size: 110%;
 }
 
 .btn:hover {
@@ -85,4 +86,8 @@ body {
 
 #timer {
 	color: rgb(255,170,0);
+}
+
+#instructions * {
+	margin: 5%;
 }
