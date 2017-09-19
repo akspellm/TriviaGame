@@ -234,7 +234,7 @@ $("#play").on("click", function() {
 
     var display;
     var off;
-    var count = 30;
+    var count = 10;
     var timer;
     var timerOn;
     var gameOn = true;
@@ -291,18 +291,18 @@ $("#play").on("click", function() {
 
     function messageOff() {
         off = setTimeout(function() {
-            $("#message-box").toggle();
-            $("#content").toggle();
             i += 1;
-            count = 30;
+            count = 10;
             if (i === questions.length) {
                 gameOver();
             } else {
                 $("#answers").empty();
                 displayQuestion();
                 startTimer();
+                $("#message-box").toggle();
+            	$("#content").toggle();
             }
-        }, 5000);
+        }, 3000);
     }
 
     function stopTimer() {

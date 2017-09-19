@@ -1,19 +1,19 @@
 body {
-	background: url("../images/space.jpg") no-repeat;
-	background-size: cover;
-
+	background: url("../images/space.jpg");
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 150%;
 
 }
 
-#content, #game-over, #message-box {
-	background-color: rgba(0,0,0,0.8);
+#content, #game-over, #message-box, #game-over {
+	background-color: rgba(0,85,121, 0.9);
 	min-height: 600px;
 	max-height: 80%;
 	margin: 0px auto;
 	display: block;
 	margin-top: 10%;
 	margin-bottom: 10%;
-	color: white;
+	color: rgb(253,74,97);
 	display: none;
 	z-index: 2;
 }
@@ -24,7 +24,7 @@ body {
 }
 
 #answers li:hover {
-	border: 2px solid blue;
+	border: 2px solid rgb(255,170,0);
 }
 
 #question, #timer, #answers {
@@ -35,31 +35,54 @@ body {
 #answers li {
 	padding: 1%;
 	width: 80%;
-	margin: 0px auto;
+	margin: 2% auto;
 }
 
 #instructions {
-	background-color: rgba(0,0,0,0.8);
+	background-color: rgba(253,74,97, 0.85);
 	min-height: 600px;
 	max-height: 80%;
 	margin: 0px auto;
 	display: block;
 	margin-top: 10%;
 	margin-bottom: 10%;
-	color: white;
+	color: rgb(0,85,121);
 	text-align: center;
 	z-index: 2;
 }
 
 
-#greeter, #instruction, #play, #message-box {
+#greeter, #instruction, #play, #message-box, #game-over {
 	padding: 2%;
 }
 
-#greeter, #win-loss {
+#greeter, #win-loss, #game-over{
 	padding-top: 5%;
 }
 
-#message-box {
+#message-box, #game-over {
 	text-align: center;
+}
+
+.btn {
+	background-color: rgb(255,170,0);
+	border: 2px solid rgb(0,85,121);
+	color: rgb(0,85,121);
+}
+
+.btn:hover {
+	background-color: rgb(66,228,135);
+}
+
+#message-box, #game-over {
+	background-color: rgba(66,228,135, 0.9);
+	color: rgb(253,74,97);
+}
+
+.message-display {
+	margin: 4%;
+}
+
+#timer {
+	color: rgb(255,170,0);
 }

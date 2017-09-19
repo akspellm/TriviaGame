@@ -6,6 +6,7 @@
     <title>It's Trivia Time!</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 </head>
 <body>
 
@@ -33,20 +34,20 @@
 	</div>
 
 	<div class="container" id="message-box">
-		<h2 id="win-loss"></h2>
-		<h4> Your current score is: </h4>
-		<h6 id="correct-answers"></h6>
-		<h6 id="incorrect-answers"></h6>
+		<h1 id="win-loss" class="message-display"></h2>
+		<h2 class="message-display"> Your current score is: </h4>
+		<h4 class="message-display" id="correct-answers"></h6>
+		<h4 class="message-display" id="incorrect-answers"></h6>
 	</div>
 
 	<div class="container" id="game-over">
-		<h1>Game Over</h1>
+		<h1 class="message-display" >Game Over</h1>
 
-		<h3 id="final-stats">Final Stats: </h3>
-		<h4 id="final-correct"></h4>
-		<h4 id="final-incorrect"></h4>
+		<h2 class="message-display" id="final-stats">Final Stats: </h3>
+		<h4 class="message-display" id="final-correct"></h4>
+		<h4 class="message-display" id="final-incorrect"></h4>
 
-		<button type="button" class="btn btn-primary btn-center" id="play-again">Let's Play!</button>
+		<button type="button" class="btn btn-primary btn-center message-display" id="play-again">Let's Play!</button>
 	</div>	
 
 
