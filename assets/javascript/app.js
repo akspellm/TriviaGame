@@ -21,6 +21,8 @@ question1 = {
 			type: "incorrect"
 		},
 	], 
+
+	correct: "Tigers are the largest breed of cat!"
 },
 
 question2 = {
@@ -44,29 +46,33 @@ question2 = {
 			type: "incorrect"
 		}, 
 	],
+
+	correct: "Cats are native to all continents with the exception of Australia and Antartica!"
 },
 
 question3 = {
-	question: "Which of the following senses is the poorest developed in a cat?",
+	question: "A term for a group of cats is:",
 	
 	answers : [
 		answer1 = {
-			answer: "Smell",
+			answer: "Caggle",
 			type: "incorrect"
 		}, 
 		answer2 = {
-			answer: "Hearing",
+			answer: "Clutch",
 			type: "incorrect"
 		}, 
 		answer3 = {
-			answer: "Touch",
-			type: "incorrect"
+			answer: "Clowder",
+			type: "correct"
 		}, 
 		answer4 = {
-			answer: "Sight",
-			type: "correct"
+			answer: "Covey",
+			type: "incorrect"
 		},
-	] 
+	],
+
+	correct: "A group of cats is called a clowder!"
 },
 
 question4 = {
@@ -89,30 +95,34 @@ question4 = {
 			answer: "Prague",
 			type: "incorrect"
 		}, 
-	]
+	],
+
+	correct: "Modern cat shows began at London's Crystal Palace in July 1871!"
 },
 
 question5 = {
-	question: "Which is recommended as the best culinary option for domestic cats?",
+	question: "A term for a group of kittens is:",
 	
 	answers : [
 		answer1 = {
-			answer: "Human Food",
-			type: "incorrect"
+			answer: "Kindle",
+			type: "correct"
 		}, 
 		answer2 = {
-			answer: "Household Bugs",
+			answer: "Nook",
 			type: "incorrect"
 		}, 
 		answer3 = {
-			answer: "Dry Cat Food",
-			type: "correct"
-		}, 
-		answer4 = {
-			answer: "Moist Cat Food",
+			answer: "Kaggle",
 			type: "incorrect"
 		}, 
-	]
+		answer4 = {
+			answer: "Kaboodle",
+			type: "incorrect"
+		}, 
+	],
+
+	correct: "A group of kittens is called a kindle!"
 },
 
 question6 = {
@@ -135,14 +145,16 @@ question6 = {
 			answer: "It's a type of scent marking.",
 			type: "correct"
 		}, 
-	]
+	],
+
+	correct: "Cats rub agains their owners legs to mark them with their scent!"
 },
 
 question7 = {
 	question: "What organization sets the standards for cat breeds?",
 	answers : [
 		answer1 = {
-			answer: "Cat Fanciers'Association",
+			answer: "Cat Fanciers' Association",
 			type: "correct"
 		}, 
 		answer2 = {
@@ -157,7 +169,9 @@ question7 = {
 			answer: "International Cat Association",
 			type: "incorrect"
 		}, 
-	]
+	],
+
+	correct: "The Cat Fanciers Association (CFA) sets the standards for cat breeds!"
 },
 
 question8 = {
@@ -180,7 +194,9 @@ question8 = {
 			answer: "100",
 			type: "incorrect"
 		},
-	] 
+	],
+
+	correct: "The CFA recognizes 35 distinct cat breeds!" 
 },
 
 question9 = {
@@ -203,7 +219,9 @@ question9 = {
 			answer: "Manx",
 			type: "correct"
 		}, 
-	]
+	],
+
+	correct: "Manx cats are born with no tail!"
 },
 
 question10 = {
@@ -226,7 +244,9 @@ question10 = {
 			answer: "Bengal",
 			type: "incorrect"
 		}, 
-	]
+	],
+
+	corrrect: "Siamese cats are the most popular short-haired cat breed in the United States!"
 }
 ];
 
@@ -287,6 +307,7 @@ $("#play").on("click", function() {
     };
 
     function displayStats() {
+    	$("#correct-answer").empty().html(questions[i].correct);
     	i += 1;
     	tickTock.src="";
             if (i === questions.length) {
@@ -300,12 +321,12 @@ $("#play").on("click", function() {
 }
 
     function messageOff() {
-    	count = 10;
         $("#answers").empty();
         displayQuestion();
         off = setTimeout(function() {
                 startTimer();
                 $("#message-box").toggle();
+                count = 10;
             	$("#content").toggle();
         }, 3000);
     }
@@ -319,7 +340,6 @@ $("#play").on("click", function() {
         $("#game-over").toggle();
         $("#final-correct").html("Correct Answers: " + correct);
         $("#final-incorrect").html("Incorrect Answers: " + incorrect);
-        i = 0;
     }
 
 
@@ -361,4 +381,3 @@ $("#play-again").on("click", function() {
 
  
 		
-
