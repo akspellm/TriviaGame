@@ -250,8 +250,7 @@ question10 = {
 }
 ];
 
-var tickTock = new Audio();
-tickTock.src = "ticktock.wav";
+
 
 $("#play").on("click", function() {
 
@@ -292,8 +291,6 @@ $("#play").on("click", function() {
             displayStats();
             messageOff();
         })
-
-        tickTock.play();
     };
 
     function startTimer() {
@@ -309,7 +306,6 @@ $("#play").on("click", function() {
     function displayStats() {
     	$("#correct-answer").empty().html(questions[i].correct);
     	i += 1;
-    	tickTock.src="";
             if (i === questions.length) {
                 gameOver();
             } else {
